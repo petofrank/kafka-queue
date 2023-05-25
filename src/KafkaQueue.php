@@ -50,7 +50,7 @@ class KafkaQueue extends Queue implements QueueContract
     public function pop($queue = null)
     {
         try {
-            $this->consumer->subscribe($queue ?? env('KAFKA_QUEUE'));
+            $this->consumer->subscribe([$queue ?? env('KAFKA_QUEUE')]);
             $message = $this->consumer->consume(120 * 1000);
             switch ($message->err) {
                 case RD_KAFKA_RESP_ERR_NO_ERROR:
