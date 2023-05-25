@@ -1,0 +1,17 @@
+{
+    "name": "peter.frank/kafka-queue",
+    "require": {
+        "laravel/framework": "^8.83"
+    },
+    "autoload": {
+        "psr-4": {
+            "PeterFrank\\KafkaQueue\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Peter Frank",
+            "email": "peter.frank@partnersgroup.sk"
+        }
+    ]
+}
